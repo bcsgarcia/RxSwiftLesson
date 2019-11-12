@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wyu-dv-Fbt">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Task View Controller-->
+        <scene sceneID="Z32-cj-uNV">
+            <objects>
+                <viewController storyboardIdentifier="addTaskViewController" id="wyu-dv-Fbt" customClass="AddTaskViewController" customModule="RxSwiftLesson" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kpi-iU-T8I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ViJ-Kh-0wc">
+                                <rect key="frame" x="77" y="436" width="260" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="yUp-xr-UYf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBP-yH-9El">
+                                <rect key="frame" x="157" y="570" width="100" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="PLn-YU-crF"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ecm-qu-yeU">
+                                <rect key="frame" x="77" y="305" width="260" height="32"/>
+                                <segments>
+                                    <segment title="Work"/>
+                                    <segment title="Home"/>
+                                    <segment title="Personal"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mBP-yH-9El" firstAttribute="centerX" secondItem="ViJ-Kh-0wc" secondAttribute="centerX" id="Ncc-G1-Oh0"/>
+                            <constraint firstItem="ViJ-Kh-0wc" firstAttribute="centerY" secondItem="wMf-th-Ii1" secondAttribute="centerY" id="bVK-ny-OTI"/>
+                            <constraint firstItem="ViJ-Kh-0wc" firstAttribute="centerX" secondItem="wMf-th-Ii1" secondAttribute="centerX" id="fWq-Mk-y6Q"/>
+                            <constraint firstItem="mBP-yH-9El" firstAttribute="top" secondItem="ViJ-Kh-0wc" secondAttribute="bottom" constant="100" id="hRI-HC-VfU"/>
+                            <constraint firstItem="ecm-qu-yeU" firstAttribute="width" secondItem="ViJ-Kh-0wc" secondAttribute="width" id="pdc-V9-ahd"/>
+                            <constraint firstItem="ViJ-Kh-0wc" firstAttribute="top" secondItem="ecm-qu-yeU" secondAttribute="bottom" constant="100" id="tGD-iV-Rae"/>
+                            <constraint firstItem="ecm-qu-yeU" firstAttribute="centerX" secondItem="ViJ-Kh-0wc" secondAttribute="centerX" id="yld-Fo-0ae"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wMf-th-Ii1"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn" destination="mBP-yH-9El" id="crK-Wv-S0b"/>
+                        <outlet property="segmentedControl" destination="ecm-qu-yeU" id="ZaR-7r-ERi"/>
+                        <outlet property="taskTxt" destination="ViJ-Kh-0wc" id="S6F-n3-Lhf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mXR-UC-eoC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71" y="58"/>
+        </scene>
+    </scenes>
+</document>
