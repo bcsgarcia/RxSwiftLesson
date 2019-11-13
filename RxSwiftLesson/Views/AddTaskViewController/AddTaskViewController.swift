@@ -32,6 +32,7 @@ class AddTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupObservables()
+        
     }
 
 }
@@ -44,11 +45,26 @@ extension AddTaskViewController {
             
             guard let type = Category(rawValue: strongSelf.segmentedControl.selectedSegmentIndex), let title = strongSelf.taskTxt.text else { return }
             
-            let newTask = Task(name: title, category: type)
-            strongSelf.taskSubject.onNext(newTask)
-            strongSelf.dismiss(animated: true, completion: nil)
-            
+            if title != "" {
+                let newTask = Task(name: title, category: type)
+                strongSelf.taskSubject.onNext(newTask)
+                strongSelf.dismiss(animated: true, completion: nil)
+            } else {
+                let alert = UIAlertController(title: "", message: "Please, type a title for your task", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                strongSelf.present(alert, animated: true)
+            }
         }).disposed(by: disposeBag)
         
+        taskTxt.rx.text.orEmpty.asObservable().subscribe(onNext: { [weak self] value in
+            guard let strongSelf = self else { return }
+            strongSelf.btn.isEnabled = value != ""
+            strongSelf.btn.backgroundColor = value != "" ? .green : .darkGray
+        }).disposed(by: disposeBag)
+        
+        btn.setTitleColor(.white, for: .disabled)
+        btn.setTitleColor(.black, for: .normal)
     }
+    
+    
 }

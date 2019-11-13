@@ -45,6 +45,7 @@
 		11EEA4F7371B05E7EA0F12AD /* Pods_RxSwiftLesson.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftLesson.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		221F3581C6FE52C266D08B60 /* Pods-RxSwiftLesson.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftLesson.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftLesson/Pods-RxSwiftLesson.debug.xcconfig"; sourceTree = "<group>"; };
 		651CAA7231FA703E5C388DA5 /* Pods-RxSwiftLesson-RxSwiftLessonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftLesson-RxSwiftLessonUITests.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftLesson-RxSwiftLessonUITests/Pods-RxSwiftLesson-RxSwiftLessonUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D5A4FC3237C241F00842737 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7D68B44223797B20006C2240 /* RxSwiftLesson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftLesson.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D68B44523797B20006C2240 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D68B44723797B20006C2240 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 		7D68B43923797B20006C2240 = {
 			isa = PBXGroup;
 			children = (
+				7D5A4FC3237C241F00842737 /* MyPlayground.playground */,
 				7D68B44423797B20006C2240 /* RxSwiftLesson */,
 				7D68B45B23797B23006C2240 /* RxSwiftLessonTests */,
 				7D68B46623797B23006C2240 /* RxSwiftLessonUITests */,
@@ -190,8 +192,8 @@
 		7D68B47C237AF56D006C2240 /* AddTaskViewController */ = {
 			isa = PBXGroup;
 			children = (
-				7D68B475237982FE006C2240 /* AddTaskViewController.swift */,
 				7D68B47D237AF5B4006C2240 /* AddTask.storyboard */,
+				7D68B475237982FE006C2240 /* AddTaskViewController.swift */,
 			);
 			path = AddTaskViewController;
 			sourceTree = "<group>";
