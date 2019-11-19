@@ -46,6 +46,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="pNm-tl-i5w">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="camera" id="zth-sh-gFv">
+                            <connections>
+                                <segue destination="IOW-t4-uzP" kind="show" identifier="camIdentifier" id="SLi-1s-jQs"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="M4S-Gv-XMz">
                             <connections>
                                 <segue destination="mX9-2u-dXz" kind="showDetail" identifier="addTaskIdentifier" id="cdY-97-lqk"/>
@@ -60,6 +65,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+        <!--VideoRecord-->
+        <scene sceneID="c38-tK-Szu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="VideoRecord" id="IOW-t4-uzP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vgX-a2-JVc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pad-xh-lTN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1748" y="-140"/>
         </scene>
         <!--AddTask-->
         <scene sceneID="w2K-hs-EZP">

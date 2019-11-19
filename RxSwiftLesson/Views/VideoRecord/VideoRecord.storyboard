@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ljb-Yt-IBn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video Record View Controller-->
+        <scene sceneID="thp-bA-6tq">
+            <objects>
+                <viewController id="ljb-Yt-IBn" customClass="VideoRecordViewController" customModule="RxSwiftLesson" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZvI-3w-3OT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVZ-Ix-xqB" customClass="PreviewView" customModule="RxSwiftLesson" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaB-oc-g8t" customClass="PreviewView" customModule="RxSwiftLesson" customModuleProvider="target">
+                                <rect key="frame" x="289" y="657" width="105" height="185"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="185" id="L3Z-ge-P32"/>
+                                    <constraint firstAttribute="width" constant="105" id="wTe-XH-atn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mVZ-Ix-xqB" firstAttribute="trailing" secondItem="V9T-3m-MBh" secondAttribute="trailing" id="1UV-A7-A6k"/>
+                            <constraint firstItem="mVZ-Ix-xqB" firstAttribute="leading" secondItem="V9T-3m-MBh" secondAttribute="leading" id="3Xd-oc-Bkj"/>
+                            <constraint firstItem="V9T-3m-MBh" firstAttribute="bottom" secondItem="jaB-oc-g8t" secondAttribute="bottom" constant="20" id="LBn-sX-RBZ"/>
+                            <constraint firstItem="mVZ-Ix-xqB" firstAttribute="top" secondItem="V9T-3m-MBh" secondAttribute="top" id="R2n-c2-SFB"/>
+                            <constraint firstItem="V9T-3m-MBh" firstAttribute="trailing" secondItem="jaB-oc-g8t" secondAttribute="trailing" constant="20" id="SqQ-rQ-Oky"/>
+                            <constraint firstItem="mVZ-Ix-xqB" firstAttribute="bottom" secondItem="V9T-3m-MBh" secondAttribute="bottom" id="xUK-ke-uef"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V9T-3m-MBh"/>
+                    </view>
+                    <connections>
+                        <outlet property="backCamView" destination="mVZ-Ix-xqB" id="ZnX-Tg-fED"/>
+                        <outlet property="frontCamView" destination="jaB-oc-g8t" id="vcm-ji-Oxz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7DK-Pe-qUi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="163.768115942029" y="157.36607142857142"/>
+        </scene>
+    </scenes>
+</document>
